@@ -1,0 +1,368 @@
+* {
+  box-sizing: border-box;
+}
+
+hr {
+  margin-top: 100px;
+  margin-bottom: 5px;
+  color: teal;
+}
+
+#title {
+  font-family: 'Caveat','Coming Soon','Josefin Sans', 'Open Sans Condensed', sans-serif;
+  font-size: 72px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#title:hover {
+  cursor: pointer;
+}
+
+#albumHeader {
+  visibility: hidden;
+  font-size: 40px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 12px;
+  width: 0;height:0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 25px;
+  background-color: #90c0c0;
+}
+
+h1 {
+  font-weight: bold;
+  color: #a848a8;
+}
+
+#desc {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top:-25px;
+  font-size: 24px;
+}
+
+#recordInst {
+  color: black;
+  visibility: hidden;
+  text-align: left;
+  margin: auto;
+  margin-bottom: 20px; margin-top: 30px;
+  font-size: 24px;
+  width: 0;height:0;
+}
+.carrot_b {
+  color: black; 
+}
+
+.carrot_p {
+  color: #a848a8; 
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.section {
+  display: table-cell;
+  padding: 10px;
+  width:25%;  
+}
+
+
+
+
+p {
+  max-width: 600px;
+  color: #a848a8;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+form {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/*Displays: "Search results for: [artist]"*/
+#artistHeader {
+  width: 70%;
+  text-align: center;
+  margin-right: 50px;
+  font-size: 30px;
+  display: block;
+}
+
+.artistContainer {
+    margin: 0 auto;
+    width: 70%;
+    
+    border: 4px solid teal;
+    box-shadow: 5px 8px teal;
+    border-radius: 50px;
+    
+    padding: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.artistContainer img {
+    margin-right: 15px; 
+    border-radius: 150px;
+    border: 3px solid teal;
+    width: 150px;
+    min-width: 75px;
+    max-width: 150px;
+    float: left;
+}
+
+.artistContainer p {
+    font-size: 48px;/*4.5vw;*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: teal;
+}
+
+/*When hovering over an artist */
+.artistContainer:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  box-shadow: 5px 10px teal;
+}
+
+@media (min-width: 769px) {
+  .img:hover {
+    transform: scale(1.1);
+  }
+}
+
+/*Spotify play button wrapper*/
+#results {
+  visibility: hidden;
+  width: 0; height: 0;
+  text-align: center;
+  display:inline-block;
+}
+
+/*The spotify play button*/
+.player {
+  width: 450px;
+  height: 350px;
+  opacity: 1;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: inline-block;
+  box-shadow: 5px 10px teal;
+}
+
+#vinylContainer {
+  margin: 0 auto;
+/*   margin-top: 50px; */
+  display:inline-block;
+}
+
+#turnTable {
+  text-align: center;
+}
+
+#recordPlayer {
+  visibility: hidden;
+  background-color: teal;
+  border-radius: 20px;
+  box-shadow: 5px 10px #005757;
+  width: 400px; height: 400px;
+/*   float: left; */
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 80px;
+  display: inline-block;
+}
+
+#needle {
+  visibility: hidden;
+  transform: rotate(-10deg);
+  width: 100px;
+  height: 350px;
+  display: inline-block;
+/*   animation: rotateNeedle 2s forwards; */
+}
+
+/*The created vinyl*/
+#vinyl {
+  width: 400px;
+  border-radius: 300px;
+  border: 100px solid black;
+/*   -webkit-animation: rotate 3s linear infinite; */
+}
+
+/*Vinyl rotating**********/
+@-webkit-keyframes rotate {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+/**************************/
+
+/*Rotate needle by 20 degrees*/
+@-webkit-keyframes rotateNeedle {
+  from{
+    -webkit-transform: rotate(0deg);
+  }
+  to{
+  -webkit-transform: rotate(30deg);
+  }
+}
+@-webkit-keyframes needleReverse {
+  from{
+    -webkit-transform: rotate(30deg);
+  }
+  to{
+  -webkit-transform: rotate(0deg);
+  }
+}
+/**************************/
+
+input {
+  padding: 5px;
+  width: 40%;
+  border: 1px solid teal;
+  border-radius: 10px;
+  font-size: 22px;
+  display: inline-block;
+  box-shadow: 2px 2px teal;
+}
+
+button {
+  color: white;
+  background-color: #FF6AD5;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+  display: inline-block;
+}
+
+button:hover {
+  background-color: yellow;
+  color: teal;
+  transform: scale(1.1);
+}
+
+.buttonWrapper {
+  visibility: hidden;
+  text-align: center;
+  margin: 0 auto;
+  width:0;height:0;
+}
+
+#artistBtn {
+  margin: 10px 10px 25px 10px;
+  width:0;height:0;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+footer {
+  margin:0 auto;
+  margin-top: 50px;
+  padding-top: 25px;
+  width:100%;
+  text-align: center;
+}
+
+
+.icon {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/*Using a smaller device*/
+@media (max-width: 850px) { 
+  #title {
+    font-size: 56px;
+  }
+  .section {
+    margin: 0 auto;
+    width: 50%;
+    float: left;
+  }  
+  .artistContainer img {
+    width: 50%;
+  }
+  #artistHeader {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+  .artistContainer {
+    width: 90%;
+  }
+  .artistContainer p {
+    font-size: 26px;
+  }
+  
+  #recordPlayer {
+    width: 180px;height:180px;
+    margin-left: -10px;
+  }
+  #needle {
+    width:40px;height:175px;
+  }
+  #vinyl {
+    width:180px;height:180px;
+    border-radius: 150px;
+    border: 50px solid black;
+  }
+  
+  #vinylContainer {
+     margin-right: 25px;
+  }
+  
+  .player {
+    width: 90%;
+    height: 200px;
+  }
+}
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Turntabler</title>
+    <meta name="description" content="A virtual turntable that plays any album on Spotify">
+    <meta name="keywords" content="Spotify,virtual record player,record player,turntabler,turntable,vinyl">
+    <meta name="author" content="Seth Polyniak">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/040cbe9d-c006-4772-986c-53e1f29044a6%2Frecord_ico.svg?v=1575335323204" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Caveat|Coming+Soon|Josefin+Sans|Open+Sans+Condensed:300&display=swap" rel="stylesheet"> 
+    <audio id="vinylSounds" loop><source src="https://cdn.glitch.com/040cbe9d-c006-4772-986c-53e1f29044a6%2Fvinyl.mp3?v=1575067614699" type="audio/mp3"></audio>
+  </head>
+  <body>
+    <header>
+      <h1 id="title" href="#">TURNTABLER</h1>
+    </header>
+
+    <p id="desc">Turn any Spotify album into a vinyl record with your own virtual turntable.<br><br>
+                  <b>Start by searching for an artist below.</b></p>
+    
+    <main>
+      <form id="searchForm">
+        <input id="query" required type="text" maxlength="100" placeholder="Search for an Artist">
+        <button class="submit" type="submit">Search</button>
+      </form>
+      
+      <p id="albumHeader">Choose an album to turn into vinyl.</p>
+      <div id="albumArtwork"></div>
+
+      <div id="artistHeader"></div>
+      <div id="artistList"></div>
+      
+      <section id="embed">
+      </section>
+      
+      
+      <hr>
+      <p id="recordInst"><span class="carrot_black">&gt;</span><b> Drag and drop</b> the <em>record</em> onto the <em>turntable</em> below. (click 'Place Record' if on mobile)<br>
+                            <span class="carrot_black">&gt;</span> Click the <b>play button</b> in the Spotify player.<br>
+                            <span class="carrot_p">&gt; <b>Enjoy the music.</b></span> </p>
+      
+      <div class="buttonWrapper">
+        <button type="button" id="artistBtn">Search Another Artist</button>
+        <button type="button" id="moveRecordBtn">Place Record</button>
+      </div>
+      
+      <div id="turnTable"> 
+        <div id="results"></div>
+        <div id="vinylContainer"></div>
+        <div style="display:inline-block">
+          <div id="recordPlayer" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div style="display: inline-block"><img id="needle" src="https://cdn.glitch.com/040cbe9d-c006-4772-986c-53e1f29044a6%2Fneedle2.svg?v=1575221192482" alt="turntable's needle"></div>
+        </div>
+      </div>
+
+      <footer>
+        <div>
+          <a href="https://github.com/sethpoly" target="_blank"><img class="icon" src="https://cdn.glitch.com/040cbe9d-c006-4772-986c-53e1f29044a6%2FGitHub-Mark-32px.png?v=1575331945720" alt="github link"></a>
+          <a href="https://www.linkedin.com/in/sethpolyniak/" target="_blank"><img class="icon" src="https://cdn.glitch.com/040cbe9d-c006-4772-986c-53e1f29044a6%2Flinkedin-32.png?v=1575333719749" alt="linkedin link"></a>
+        </div>
+       
+         Copyright &copy 2019 Seth Polyniak
+      </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
