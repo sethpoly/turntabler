@@ -7,7 +7,7 @@ http://turntabler.com/
 ![Preview](https://raw.githubusercontent.com/sethpoly/turntabler/master/turntabler_imgs/search_img.PNG) 
 <br>
 <br>
-## Choose any album for the artist's list of albums. <br>
+## Choose any album from the artist's list of albums. <br>
 ![Preview](https://raw.githubusercontent.com/sethpoly/turntabler/master/turntabler_imgs/album_img.PNG) 
 <br>
 <br>
