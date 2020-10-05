@@ -3,4 +3,4 @@ Uses the Spotify Web API to demonstrate turning any Spotify album into a virtual
 http://turntabler.com/
 
 Navigate to http://turntabler.com, and search for your favorite music artist!
-<img src="https://raw.githubusercontent.com/sethpoly/turntabler/tree/master/turntabler_imgs?sanitize=true&raw=true"/>
+<img src="https://raw.githubusercontent.com/sethpoly/turntabler/tree/master/turntabler_imgs/search_png?sanitize=true&raw=true"/>
